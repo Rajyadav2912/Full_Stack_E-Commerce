@@ -28,27 +28,27 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dataResponse = await fetch(0, {
-      // method: SummaryApi.signIn.method,
-      // credentials: "include",
-      // headers: {
-      //   "content-type": "application/json",
-      // },
-      // body: JSON.stringify(data),
-    });
+    // const dataResponse = await fetch(0, {
+    //   // method: SummaryApi.signIn.method,
+    //   // credentials: "include",
+    //   // headers: {
+    //   //   "content-type": "application/json",
+    //   // },
+    //   // body: JSON.stringify(data),
+    // });
 
-    const dataApi = await dataResponse.json();
+    // const dataApi = await dataResponse.json();
 
-    if (dataApi.success) {
-      toast.success(dataApi.message);
-      navigate("/");
-      // fetchUserDetails();
-      // fetchUserAddToCart();
-    }
+    // if (dataApi.success) {
+    //   toast.success(dataApi.message);
+    //   navigate("/");
+    // fetchUserDetails();
+    // fetchUserAddToCart();
+    // }
 
-    if (dataApi.error) {
-      toast.error(dataApi.message);
-    }
+    // if (dataApi.error) {
+    //   toast.error(dataApi.message);
+    // }
   };
 
   console.log("data login", data);
@@ -120,7 +120,7 @@ const Login = () => {
           </form>
 
           <p className="my-5">
-            Don't have account ?
+            Don't have account ?{" "}
             <Link
               to={"/signup"}
               className=" text-red-600 hover:text-red-700 hover:underline"
