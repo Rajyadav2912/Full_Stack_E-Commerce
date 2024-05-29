@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import loginIcons from "../assest/signin.gif";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import ImageToBase64 from "../Helper/ImageToBase64";
 
 const SignUp = () => {
@@ -17,7 +17,7 @@ const SignUp = () => {
     profilePic: "",
   });
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // const { fetchUserDetails, fetchUserAddToCart } = useContext(Context);
 
   const handleOnChange = (e) => {
@@ -92,6 +92,7 @@ const SignUp = () => {
                   type="file"
                   className="hidden"
                   onChange={handleUploadPic}
+                  required
                 />
               </label>
             </form>
@@ -108,6 +109,7 @@ const SignUp = () => {
                   value={data.name}
                   onChange={handleOnChange}
                   className="w-full h-full outline-none bg-transparent"
+                  required
                 />
               </div>
             </div>
@@ -135,6 +137,7 @@ const SignUp = () => {
                   value={data.password}
                   name="password"
                   onChange={handleOnChange}
+                  required
                   className="w-full h-full outline-none bg-transparent"
                 />
                 <div
@@ -161,6 +164,7 @@ const SignUp = () => {
                   value={data.confirmpassword}
                   name="confirmpassword"
                   onChange={handleOnChange}
+                  required
                   className="w-full h-full outline-none bg-transparent"
                 />
                 <div

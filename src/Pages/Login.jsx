@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import loginIcons from "../assest/signin.gif";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,7 +11,7 @@ const Login = () => {
     password: "",
   });
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // const { fetchUserDetails, fetchUserAddToCart } = useContext(Context);
 
   const handleOnChange = (e) => {
@@ -74,6 +74,7 @@ const Login = () => {
                   name="email"
                   value={data.email}
                   onChange={handleOnChange}
+                  required
                   className="w-full h-full outline-none bg-transparent"
                 />
               </div>
@@ -88,6 +89,7 @@ const Login = () => {
                   value={data.password}
                   name="password"
                   onChange={handleOnChange}
+                  required
                   className="w-full h-full outline-none bg-transparent"
                 />
                 <div
